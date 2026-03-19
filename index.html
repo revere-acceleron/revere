@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="Reflective Evolving Research Engineer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Reflective Evolving Research Engineer: A Framework for Continuous Learning and Adaptive Prompt Optimization in Research-Coding Agents</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <!-- <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+/Users/panlu/Library/Mobile Documents/com~apple~CloudDocs/ImageMath/visual-mathqa-server/data_final/images
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <!-- <link rel="icon" href="static/images/icon.png"> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/leaderboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator_bulma.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script> -->
+  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/explorer-index.js"></script>
+  <script src="static/js/question_card.js"></script>
+
+  <script src="static/js/leaderboard_testmini.js"></script>
+  <script src="https://osu-nlp-group.github.io/ScienceAgentBench/data/results/output_folders.js" defer></script>
+  <script src="https://osu-nlp-group.github.io/ScienceAgentBench/data/results/model_scores.js" defer></script>
+
+  <script src="https://osu-nlp-group.github.io/ScienceAgentBench/visualizer/data/data_public.js" defer></script>
+  <style>
+    pre {
+        max-height: 400px; 
+        overflow-x: auto; 
+        overflow-y: auto;
+        background-color: #f0f0f0; 
+        padding: 10px;
+        border: 1px solid #ccc; 
+        text-align: left;
+    }
+</style>
+<script>
+  function loadJSON(file, elementId) {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+              document.getElementById(elementId).textContent = xhr.responseText;
+              hljs.highlightElement(document.getElementById(elementId));
+          }
+      };
+      xhr.open('GET', file, true);
+      xhr.send();
+  }
+
+  loadJSON('./static/example/plan_1.json', 'json1');
+  loadJSON('./static/example/plan_6.json', 'json2');
+  loadJSON('./static/example/plan_11.json', 'json3');
+  loadJSON('./static/example/plan_16.json', 'json4');
+  loadJSON('./static/example/plan_21.json', 'json5');
+  loadJSON('./static/example/plan_26.json', 'json6');
+  loadJSON('./static/example/plan_31.json', 'json7');
+  loadJSON('./static/example/plan_36.json', 'json8');
+  loadJSON('./static/example/plan_41.json', 'json9');
+</script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <div>
+          <br />
+
+        <p> Coming Soon...</p></div>
+        
+        <!-- <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a> -->
+        <!-- @PAN TODO: consider adding links? -->
+        <!--<div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://imageomics.github.io/bioclip/">
+              <b>BioCLIP</b>
+              <p style="font-size:18px; display: inline; margin-left: 5px;"></p>
+            </a>
+            <a class="navbar-item" href="https://osu-nlp-group.github.io/LLM4Chem/">
+              <b>LlaSMol</b>
+              <p style="font-size:18px; display: inline; margin-left: 5px;"></p>
+            </a>
+            <a class="navbar-item" href="https://tiger-ai-lab.github.io/MAmmoTH/">
+              <b>MAmmoTH</b>
+              <p style="font-size:18px; display: inline; margin-left: 5px;"></p>
+            </a>
+            <a class="navbar-item" href="https://osu-nlp-group.github.io/TravelPlanner/">
+              <b>TravelPlanner</b>
+              <p style="font-size:18px; display: inline; margin-left: 5px;"></p>
+            </a>
+            <a class="navbar-item" href="https://osu-nlp-group.github.io/Mind2Web/">
+              <b>Mind2Web</b>
+              <p style="font-size:18px; display: inline; margin-left: 5px;"></p>
+            </a>  
+          </div>
+        </div>-->
+      </div>
+
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title is-bold">
+            <span class="mathvista" style="vertical-align: middle">ReflectiveEvolvingResearchEngineer</span>
+          </h1>
+          <h2 class="subtitle is-3 publication-subtitle">
+            A Framework for Continuous Learning and Adaptive Prompt Optimization in Research-Coding Agents
+          </h2>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Balaji Dinesh Gangireddi<sup style="color:#6fbf73;">1</sup>,</span>
+            <span class="author-block">
+              Aniketh Garikaparthi<sup style="color:#6fbf73;">1</sup>,</span>
+            <span class="author-block">
+              Manasi Patwardhan<sup style="color:#6fbf73;">1</sup>,</span>
+            <span class="author-block">
+              Arman Cohan<sup style="color:#6fbf73;">2</sup></span>
+          </div>
+
+          <br />
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">
+              <sup style="color:#6fbf73;">1</sup>TCS Research
+            </span>
+            <span class="author-block">
+              <sup style="color:#6fbf73;">2</sup>Yale University
+            </span>
+          </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <!-- <a href="https://lupantech.github.io/papers/arxiv23_mathvista.pdf"
+                   class="external-link button is-normal is-rounded is-dark"> -->
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv coming soon</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!--<span class="link-block">
+                <a href="https://huggingface.co/datasets/osunlp/ScienceAgentBench"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                   
+                  </span>
+                  <span>Benchmark</span>
+                </a>
+              </span>-->
+              <span class="link-block">
+                <a href=""
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code Coming Soon</span>
+                </a>
+              </span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>
+        <strong>
+          Current prompt optimization approaches for language agents primarily depend on local feedback signals to refine behavior. As a result, they often fail to capture recurring patterns across tasks, leading to limited generalization. In many cases, these methods rely on complete prompt rewrites or loosely structured updates, which can unintentionally discard previously learned knowledge. These challenges become more pronounced in research-coding environments, where workflows involve diverse repositories, incomplete configurations, and weak or inconsistent feedback signals. Reproducing results from public codebases—commonly used as a benchmark for evaluation—remains particularly difficult under such conditions.
+          
+          In this work, we introduce <b>Reflective Evolving Research Engineer (REVERE)</b>, a framework designed to enable continuous learning and adaptive improvement. REVERE leverages a <b>Global Training Context</b> to capture patterns across tasks, identifies recurring failure modes from execution traces spanning multiple repositories, and transforms these insights into reusable heuristics. Instead of rewriting prompts entirely, the framework performs targeted updates across three configurable components:
+          
+          <ul>
+            <li>
+              The <b>system prompt</b>, which governs overall agent behavior.
+            </li>
+            <li>
+              A <b>task-specific prompt template</b>, used for guiding individual tasks.
+            </li>
+            <li>
+              A <b>cumulative cheat-sheet</b>, which stores learned strategies and corrections.
+            </li>
+          </ul>
+
+          Through this reflective optimization process, REVERE demonstrates consistent improvements over prior state-of-the-art approaches. Specifically, it achieves performance gains of <b>4.50% on SUPER</b>, <b>3.51% on ResearchCodeBench</b>, and <b>4.89% on ScienceAgentBench</b>. These results highlight the effectiveness of integrating long-term learning and structured memory into language agents, enabling them to evolve and improve their capabilities over time.
+        </strong>
+        </p>
+
+        <br />
+
+       
+          Overview of REVERE.
+          Top: The framework captures global learning signals across tasks and identifies recurring failure patterns.
+          Bottom: It applies targeted updates to system prompts, task templates, and a growing knowledge base to improve performance over time across diverse research-coding scenarios.
+        </p>
+
+        <br />
+
+      </div>
+    </div>
+  </div>
+</div>
+     
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-3 has-text-centered">Disclaimer</h2>
+      <p>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- @PAN TODO: bibtex -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-3 has-text-centered">Citation</h2>
+      <pre><code><!--@misc{chen2024scienceagentbenchrigorousassessmentlanguage,
+  title={ScienceAgentBench: Toward Rigorous Assessment of Language Agents for Data-Driven Scientific Discovery}, 
+  author={Ziru Chen and Shijie Chen and Yuting Ning and Qianheng Zhang and Boshi Wang and Botao Yu and Yifei Li and Zeyi Liao and Chen Wei and Zitong Lu and Vishal Dey and Mingyi Xue and Frazier N. Baker and Benjamin Burns and Daniel Adu-Ampratwum and Xuhui Huang and Xia Ning and Song Gao and Yu Su and Huan Sun},
+  year={2024},
+  eprint={2410.05080},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2410.05080}, 
+      }--></code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <!-- <div class="container"> -->
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is adapted from <a href="https://osu-nlp-group.github.io/TravelPlanner/">TravelPlanner</a>, <a href="https://osu-nlp-group.github.io/Mind2Web/">Mind2Web</a>, <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://mathvista.github.io/">MathVista</a>, licensed under a <a
+              rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+  </footer>
+
+</body>
+
+</html>
